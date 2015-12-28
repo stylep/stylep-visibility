@@ -51,6 +51,6 @@ gulp.task('css', ['css:lint'], function() {
 
 // Watch css and compile upon file changed
 gulp.task('watch', function() {
-        gulp.watch('test.css', ['css']);
+        gulp.watch('example/index.css', ['css']);
 });
 
