@@ -1,5 +1,5 @@
 # stylep-name
-<img src=https://avatars1.githubusercontent.com/u/16121328?v=3&s=200 title=stylep-button align=right height=95>
+<img src=https://avatars1.githubusercontent.com/u/16121328?v=3&s=200 title=stylep-name align=right height=95>
 
 Everything you need to get started making a new style pattern.
 
@@ -21,7 +21,7 @@ spm install name
   /* Button Design Pattern */
   @extend %name;
 
-  /* Customize your button */
+  /* Customize your name */
   @mixin name param, param;
 
   /* or roll your own */
