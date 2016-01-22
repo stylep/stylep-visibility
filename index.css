@@ -1,9 +1,47 @@
-%name-of-pattern {
+/* Compress Helper */
+@define-mixin compress {
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
 }
 
-@define-mixin name-of-style
-  $param-name: default-value {
+/* Cloak and Unveil */
+@define-mixin cloak
+  $cloak-opacity: 0,
+  $cloak-visibility: hidden,
+  $cloak-transition: visibilty 0s 2s, opacity .1s linear {
+  opacity: $cloak-opacity;
+  transition: $cloak-transition;
+  visibilty: $cloak-visibility;
+}
 
-  @mixin-content;
+@define-mixin unveil
+  $unveil-opacity: 1,
+  $unveil-visibility: visible,
+  $unveil-transition: opacity .1s linear {
+  @mixin cloak $unveil-opacity, $unveil-visibility, $unveil-transition;
+}
+
+/* Conceal and Reveal */
+@define-mixin conceal $conceal-display: none {
+  display: $conceal-display !important;
+}
+
+@define-mixin reveal $reveal-display: inherit {
+  @mixin conceal $reveal-display;
+}
+
+/* Chop */
+@define-mixin chop {
+  @mixin compress;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* Dislocate */
+@define-mixin dislocate $dislocate-length: -999999em {
+  @mixin compress;
+  left: auto;
+  top: $dislocate-length;
 }
 
