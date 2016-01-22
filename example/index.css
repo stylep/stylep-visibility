@@ -1,4 +1,4 @@
-/* @import stylep-name; */
+/* @import stylep-visibility; */
 @import '../index.css';
 
 body {
@@ -18,5 +18,23 @@ h1 { font-weight: 100; letter-spacing: 1px; }
 h2 { font-weight: 200; }
 h3 { font-weight: 300; }
 
-/* specific classNames that show off every pattern and style */
+.box {
+  background-color: #00a0d0;
+  color: white;
+  height: 100px;
+  margin: 2em;
+  padding: 2em;
+}
+
+.chop { @mixin chop; }
+
+.cloak { @mixin cloak; }
+
+.unveil { @mixin unveil; }
+
+.conceal { @mixin conceal; }
+
+.reveal { @mixin reveal; }
+
+.dislocate { @mixin dislocate; }
 

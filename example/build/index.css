@@ -1,0 +1,48 @@
+/* @import stylep-visibility; */
+/* Compress Helper */
+
+/* Cloak and Unveil */
+
+/* Conceal and Reveal */
+
+/* Chop */
+
+/* Dislocate */
+
+body {
+  background-color: #E8EBEF;
+  color: #6B6B77;
+  font-family: 'Helvetica Neue';
+  overflow-x: hidden;
+}
+
+section {
+  background-color: #fff;
+  padding: 1em 1em .125em;
+  margin-bottom: 1em;
+}
+
+h1 { font-weight: 100; letter-spacing: 1px; }
+h2 { font-weight: 200; }
+h3 { font-weight: 300; }
+
+.box {
+  background-color: #00a0d0;
+  color: white;
+  height: 100px;
+  margin: 2em;
+  padding: 2em;
+}
+
+.chop { height: 1px; overflow: hidden; position: absolute !important; width: 1px; clip: rect(0, 0, 0, 0); }
+
+.cloak { opacity: 0; transition: visibilty 0s 2s; visibilty: hidden; }
+
+.unveil { opacity: 1; transition: opacity .1s linear; visibilty: visible; }
+
+.conceal { display: none !important; }
+
+.reveal { display: inherit !important; }
+
+.dislocate { height: 1px; overflow: hidden; position: absolute !important; width: 1px; left: auto; top: -999999em; }
+
