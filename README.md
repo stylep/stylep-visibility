@@ -1,5 +1,5 @@
-# stylep-name
-<img src=https://avatars1.githubusercontent.com/u/16121328?v=3&s=200 title=stylep-name align=right height=95>
+# stylep-visibility
+<img src=https://avatars1.githubusercontent.com/u/16121328?v=3&s=200 title=stylep-visibility align=right height=95>
 
 Everything you need to get started making a new style pattern.
 
@@ -7,50 +7,51 @@ Everything you need to get started making a new style pattern.
 You can install using the [spm](https://github.com/stylep/stylep) command or install using npm and the project title.
 
 ``` shell
-spm install name
+spm install visibility
 ```
 
 ## Usage
 ``` css
-/* name.css */
+/* visibility.css */
 
-@import “stylep-name”;
+@import “stylep-visibility”;
 
-.class {
+.hidden-object {
 
-  /* Button Design Pattern */
-  @extend %name;
+  /* Hiding Design Pattern */
+  @mixin cloak;
+}
 
-  /* Customize your name */
-  @mixin name param, param;
+.hidden-object.active {
 
-  /* or roll your own */
-
-  /* add something custom in here */
+  /* Show the object */
+  @mixin unveil;
 }
 ```
 
 ## Patterns
-Placeholder selectors that contain common styles for structure and basic behavior.
+Placeholder selectors that contain common styles for the box and visual state.
 
-#### `@extend %name-inline;`
-Describe what this pattern does.
+#### `@mixin compress;`
+This scales down the element to 1px in size and places it absolute.
 
-## Styles
-Customizable presets that give your pattern a specific style-set.
+#### `@mixin cloak;`
+Smoothly fade out your object’s visibility. Best used with unveil.
 
-### name-solid
-Describe the visual look and feel of this style.
+#### `@mixin unveil;`
+A gradual fade in for your object’s visibility. Best used with cloak.
 
-##### Options
+#### `@mixin conceal;`
+Completely remove the object from the box model. Best used with reveal.
 
-* `$param: default-value` Describe what this does
+#### `@mixin reveal;`
+Revert to inheritence to show your object. Best used with conceal.
 
-##### Example
-```css
-/* describe in english what this following statement really means in detail */
-@mixin name-solid default-value;
-```
+#### `@mixin chop;`
+Cut down your object’s size to zero, effectively hiding the object..
+
+#### `@mixin dislocate;`
+This takes your object and throws it as far off the viewport as possible.
 
 ## License
 This project is licensed under the MIT [license](LICENSE).
